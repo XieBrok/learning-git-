@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'JetBrainsMono-MediumItalic'; /* 自定义字体名称 */
+    src: url('/fonts/JetBrainsMono-MediumItalic.woff2') format('woff2'),;/* 字体文件路径 */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono-Medium'; /* 自定义字体名称 */
+    src: url('/fonts/JetBrainsMono-Medium.woff2') format('woff2'),;/* 字体文件路径 */
+    font-style: normal;
+}
+
+.tittle {
+    font-size: 2.5rem;
+    font-family: JetBrainsMono-MediumItalic;
+    color: rgb(255, 255, 255);
+}
+
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card {
+    margin-bottom: 20px; /* 调整卡片之间的间距 */
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*光标效果*/
+#typing-title::after {
+    content: '|';
+    display: inline-block;
+    animation: blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+p {
+    font-size: medium;
+    font-family:JetBrainsMono-Medium ;
+}
+
+h5,h2,h3,h4 {
+    font-family:JetBrainsMono-MediumItalic ;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 确保粒子背景在其他元素的后面 */
+    background-color: rgb(0, 0, 0);
+}
+
+body {
+    position: relative;
+    z-index: 1; /* 确保文本在粒子背景的前面 */
+}
+
+footer { 
+    background-color: transparent;
+    color: rgb(117, 117, 117);
+}
+
+/* 页脚中的语言切换按钮样式 */
+footer .language-switcher {
+    margin-top: 10px;
+    text-align: center; /* 居中对齐 */
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: center; /* 水平居中 */
+    gap: 10px; /* 按钮之间的间距 */
+}
+
+footer .language-switcher button {
+    margin: 0; /* 移除默认外边距 */
+    padding: 5px 10px; /* 调整按钮内边距 */
+}
+
+/* 网易云音乐的小窗 从这*/
+
+.music-icon {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* 小窗格样式 */
+#iframe-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: none;
+    border: none;
+    padding: 5px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#iframe-wrapper {
+    display: none; /* 默认隐藏 iframe */
+    margin-top: 5px;
+}
+
+#toggle-iframe {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#toggle-iframe:hover {
+    background-color: #777777;
+}
+/* 到这 iframe 样式 */
+
+/* 切换语言的动画 */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.thankslink{
+    font-family: JetBrainsMono-MediumItalic;
+}
